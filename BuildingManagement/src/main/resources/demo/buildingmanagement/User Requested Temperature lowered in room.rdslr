@@ -1,0 +1,11 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "User Requested Temperature lowered in room"
+	dialect "mvel"
+	when
+		User Dave has requested temperature to be lowered in room Room A
+	then
+		Turn up the Air Conditioner
+end

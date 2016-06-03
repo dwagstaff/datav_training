@@ -1,0 +1,15 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Spam Building Manager"
+	dialect "mvel"
+	activation-group "SpamGroup"
+	date-effective "31-May-2016"
+	date-expires "06-Jun-2016"
+	salience 0
+	when
+		Every 15 minutes
+	then
+		Bug Building Manager
+end

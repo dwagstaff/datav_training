@@ -1,0 +1,10 @@
+package demo.buildingmanagement;
+
+rule "Sound the alarm /w window"
+// 
+when
+    $f : FireDetected( )
+    not( SprinklerActivated( this after[0s,10s] $f ) )
+then
+    DataVServer.triggerWorkflow("Turn on Sprinker");
+end

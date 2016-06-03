@@ -1,0 +1,14 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Sound the Alarm (No Temporal Constraints)"
+	dialect "mvel"
+	when
+		$building : Building( )
+		$room : Room( building == $building )
+		FireDetected( room == $room )
+	then
+		$room.turnOnSprinkler(  );
+		$building.call911(  );
+end

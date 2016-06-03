@@ -1,0 +1,12 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Sound the Alarm (DSL)"
+	dialect "mvel"
+	when
+		There is a fire in any room in any building
+	then
+		Turn on the Sprinklers in the room
+		Call 911
+end

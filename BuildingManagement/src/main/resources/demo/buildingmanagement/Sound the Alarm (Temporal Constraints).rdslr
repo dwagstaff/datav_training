@@ -1,0 +1,9 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Sound the Alarm (Temporal Constraints)"
+	dialect "mvel"
+	when
+	then
+end

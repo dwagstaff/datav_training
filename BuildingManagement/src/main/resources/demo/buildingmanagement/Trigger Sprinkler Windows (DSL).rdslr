@@ -1,0 +1,12 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Trigger Sprinkler Windows (DSL)"
+	dialect "mvel"
+	when
+		There is a fire in any room in any building
+		and sprinklers have not be activated in the last 10 seconds
+	then
+		Turn on the Sprinklers in the room
+end

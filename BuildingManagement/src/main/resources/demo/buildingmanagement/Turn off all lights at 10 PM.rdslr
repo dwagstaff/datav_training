@@ -1,0 +1,11 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Turn off all lights at 10 PM"
+	dialect "mvel"
+	when
+		Every day at 22:00
+	then
+		Turn off all lights
+end

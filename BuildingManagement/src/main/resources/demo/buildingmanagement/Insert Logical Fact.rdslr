@@ -1,0 +1,11 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Insert Logical Fact"
+	dialect "mvel"
+	when
+		The temperature in a room exceeds the threshold for over 30 minutes
+	then
+		Assert that the room is too hot
+end

@@ -1,0 +1,11 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "High KWH usage in a rooom"
+	dialect "mvel"
+	when
+		The KWH usage in a room is greater then 100 KHW for a period of 15 minutes
+	then
+		Notify Building Manager of High Energy Usage
+end

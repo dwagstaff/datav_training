@@ -1,0 +1,11 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Consult Logical Fact"
+	dialect "mvel"
+	when
+		There is a room which is too hot
+	then
+		Turn up the Air Conditioner
+end

@@ -1,0 +1,11 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Sound The Alarm on Over Temp (DSL)"
+	dialect "mvel"
+	when
+		The temperature in a room exceeds the threshold for over 10 minutes
+	then
+		Turn up the Air Conditioner
+end

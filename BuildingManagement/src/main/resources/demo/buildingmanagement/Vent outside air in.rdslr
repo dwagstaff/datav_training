@@ -1,0 +1,12 @@
+package demo.buildingmanagement;
+
+import java.lang.Number;
+
+rule "Vent outside air in"
+	dialect "mvel"
+	when
+		There is a room with temperature above 78 F
+		Outside temperature is less then 72 F
+	then
+		Vent outside air into building
+end

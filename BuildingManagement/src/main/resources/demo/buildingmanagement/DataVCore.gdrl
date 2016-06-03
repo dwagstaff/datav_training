@@ -1,0 +1,3 @@
+package demo.buildingmanagement;
+
+global demo.buildingmanagement.DataVServer DataV;
